@@ -1,9 +1,12 @@
-title: dingwm的博客
-description: 思考、实践与成长
-author: dingwm
-theme: jekyll-theme-cayman
+title: WMDing 的博客
+description: 极简风格 · 中文支持 · 记录建模与思考
+baseurl: "" # GitHub Pages 上请留空
+url: "https://wmding.github.io"
 
-# Pages 设置（不需要 build step）
 markdown: kramdown
-plugins:
-  - jekyll-feed
+theme: null
+permalink: /:year/:month/:day/:title/
+encoding: UTF-8
+
+sass:
+  style: compressed

@@ -1,14 +1,27 @@
-# 👋 欢迎来到我的主页
+---
+layout: default
+title: 首页
+---
 
-<div style="text-align:center">
-  <img src="/assets/avatar.jpg" width="150" style="border-radius:50%">
-  <p>数据建模 | 金融风控 | 系统工程</p>
-</div>
+# 👋 欢迎访问我的博客
+
+这里是我记录思考、模型构建与项目实践的地方。内容涵盖数据分析、建模、风控、系统设计等。
 
 ---
 
-## 📌 最新文章
+## 📄 最近文章
 
-{% for post in site.posts limit:5 %}
-- [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%Y-%m-%d" }}
-{% endfor %}
+<ul>
+  {% for post in site.posts limit:5 %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> - <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+    </li>
+  {% endfor %}
+</ul>
+
+---
+
+## 📬 联系方式
+
+- GitHub: [@wmding](https://github.com/wmding)
+- Email: wmding@126.com
