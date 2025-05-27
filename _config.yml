@@ -1,0 +1,9 @@
+title: dingwm的博客
+description: 思考、实践与成长
+author: dingwm
+theme: minima
+
+# Pages 设置（不需要 build step）
+markdown: kramdown
+plugins:
+  - jekyll-feed
