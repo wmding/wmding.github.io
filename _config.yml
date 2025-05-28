@@ -1,8 +1,12 @@
+title: [Dingwm的博客]
+author: [Dingwm]
+#email: [wmding@126.com]
+description: [记录一些技术类文章]
+lang: zh-CN
+timezone: Asia/Shanghai
+
 remote_theme: pages-themes/leap-day@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 
-title: [Dingwm的博客]
-author: [Dingwm]
-email: [wmding@126.com]
-description: [A short description of your site's purpose]
+show_downloads: true
