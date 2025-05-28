@@ -47,12 +47,19 @@
         {{ content }}
 
       </section>
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.min.js"></script>
+
+      
       <footer>
         
         {% if site.github.is_project_page %}
           <p>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
         <p><small>Hosted on GitHub Pages &mdash; Theme is <a href="https://github.com/pages-themes/leap-day">leap-day</a></small></p>
+        <div id="busuanzi_container_site_pv" style="font-size: 0.9em; color: gray;">
+          本站总访问量：<span id="busuanzi_value_site_pv"></span> 次，
+          访客数：<span id="busuanzi_value_site_uv"></span> 人
+        </div>
       </footer>
     </div>
   </body>
