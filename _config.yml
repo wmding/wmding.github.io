@@ -1,12 +1,30 @@
-title: [Dingwm的博客]
-author: [Dingwm]
-#email: [wmding@126.com]
-description: [记录一些技术类文章]
-lang: zh-CN
-timezone: Asia/Shanghai
+# Site settings
+title: Dingwm blog
+email: wmding@qq.com
+description: "记录一些技术类文章。"
+baseurl: ""
+url: "https://wmding.github.io"
+#twitter_username: fzhz0207
+github_username: wmding
 
-remote_theme: pages-themes/leap-day@v0.2.0
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-archives
 
-show_downloads: true
+jekyll-archives:
+  enabled:
+    - tags
+    - categories
+  layout: archive
+  permalinks:
+    tag: '/tags/:name/'
+    category: '/categories/:name/'

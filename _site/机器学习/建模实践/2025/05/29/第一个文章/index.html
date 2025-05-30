@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dingwm blog</title>
+    <title>逻辑回归的直观理解</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="记录一些技术类文章。">
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:4000/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1%E5%AE%9E%E8%B7%B5/2025/05/29/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E7%AB%A0/">
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Dingwm blog posts" />
 
     <!-- Custom CSS -->
@@ -66,25 +66,89 @@
 
   <div class="page-content">
     <div class="wrap">
-      <div class="home">
+      <div class="post">
 
-  <ul class="posts">
-    
-    <li>
-      <span class="post-date">May 29, 2025</span>
-      <a class="post-link" href="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1%E5%AE%9E%E8%B7%B5/2025/05/29/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E7%AB%A0/">逻辑回归的直观理解</a>
-      <br>
-      逻辑回归是一种用于 **二分类问题** 的模型，它不是预测一个具体数值，而是预测某个事件发生的**概率**。
-    </li>
-    
-    <li>
-      <span class="post-date">May 28, 2025</span>
-      <a class="post-link" href="/%E5%86%99%E4%BD%9C%E9%9A%8F%E7%AC%94/2025/05/28/Welcome/">你好，世界</a>
-      <br>
-      你好，世界！欢迎来到我的博客。这里会不定期分享一些关于模型、风控、AI 应用与系统工程的文章，希望与你交流想法与实践经验。
-    </li>
-    
-  </ul>
+  <header class="post-header">
+    <h1>逻辑回归的直观理解</h1>
+    <p class="meta">May 29, 2025</p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="逻辑回归的直观理解">逻辑回归的直观理解</h1>
+
+<p>逻辑回归是一种用于 <strong>二分类问题</strong> 的模型，它不是预测一个具体数值，而是预测某个事件发生的<strong>概率</strong>。</p>
+
+<hr />
+
+<h2 id="-核心思想">📌 核心思想</h2>
+
+<p>逻辑回归并不是“回归数值”，而是“回归<strong>事件发生的概率</strong>”。</p>
+
+<p>它建立一个假设：</p>
+<blockquote>
+  <p>特征的线性组合可以决定某个事件发生的 <strong>对数几率（log odds）</strong></p>
+</blockquote>
+
+<hr />
+
+<h2 id="-数学表达">🧮 数学表达</h2>
+
+<p>逻辑回归的公式如下：</p>
+
+<p>log(p / (1 - p)) = w₀ + w₁x₁ + w₂x₂ + … + wₙxₙ</p>
+
+<p>其中：</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">p</code>：表示事件发生的概率（如某人违约的概率）</li>
+  <li><code class="language-plaintext highlighter-rouge">p / (1 - p)</code>：表示发生与不发生的比值（几率 odds）</li>
+  <li><code class="language-plaintext highlighter-rouge">log(...)</code>：将几率转为对数，称为对数几率（log odds）</li>
+  <li>右边是特征的线性组合</li>
+</ul>
+
+<hr />
+
+<h2 id="-概率计算方式">🔄 概率计算方式</h2>
+
+<p>通过 Sigmoid 函数将对数几率转换为概率：</p>
+
+<p>p = 1 / (1 + exp(-z))，其中 z = w₀ + w₁x₁ + … + wₙxₙ</p>
+
+<p>这就把任何实数压缩到 (0, 1) 区间。</p>
+
+<hr />
+
+<h2 id="-图像直观">📈 图像直观</h2>
+
+<ul>
+  <li>横轴是线性函数值 z</li>
+  <li>纵轴是概率 p</li>
+</ul>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>p
+↑
+|                        ●●●●●●●●●●●●
+|                     ●●●
+|                  ●●
+|               ●●
+|            ●
+|         ●
+|      ●
+|   ●
+|●
++--------------------------------→ z
+           0
+
+</code></pre></div></div>
+
+<p>这条曲线就是 Sigmoid 函数图像，是一个平滑的“S”形。</p>
+
+  </article>
+
+  <!-- mathjax -->
+  
+
+  <!-- disqus comments -->
+  
 
 </div>
     </div>
