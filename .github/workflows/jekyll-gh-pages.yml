@@ -41,6 +41,14 @@ jobs:
         run: |
           gem list
           bundle env
+
+      - name: Check Gemfile
+         run: |
+           if [ ! -f ./Gemfile ]; then
+             echo "Gemfile not found in the expected location.";
+             exit 1;
+           fi
+           cat ./Gemfile
       
       - name: Install dependencies
         run: |
