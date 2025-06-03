@@ -43,7 +43,7 @@ jobs:
           bundle env
 
       - name: Check Gemfile
-         run: |
+        run: |
            if [ ! -f ./Gemfile ]; then
              echo "Gemfile not found in the expected location.";
              exit 1;
