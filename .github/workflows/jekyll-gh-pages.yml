@@ -36,17 +36,19 @@ jobs:
           
       - name: Validate Ruby version
         run: ruby -v
-       
+
+      - name: Debug Gem Installation
+        run: |
+          gem list
+          bundle env
+      
       - name: Install dependencies
         run: |
           gem install bundler
           bundle config set path vendor/bundle
           bundle install --gemfile=./Gemfile
           
-      - name: Debug Gem Installation
-        run: |
-          gem list
-          bundle env
+      
 
       - name: Build site
         run: bundle exec jekyll build
