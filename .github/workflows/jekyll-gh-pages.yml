@@ -37,7 +37,7 @@ jobs:
         run: |
           gem install bundler
           bundle config set path vendor/bundle
-          bundle install --gemfile=/Gemfile
+          bundle install --gemfile=./Gemfile
 
 
       - name: Build site
