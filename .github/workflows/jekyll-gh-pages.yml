@@ -45,6 +45,7 @@ jobs:
       - name: Install dependencies
         run: |
           gem install bundler
+          gem install jekyll
           bundle config set path vendor/bundle
           bundle install --gemfile=./Gemfile
           
