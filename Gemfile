@@ -1,6 +1,5 @@
 source "https://mirrors.tuna.tsinghua.edu.cn/rubygems/"
 
-gem 'jekyll', '~> 4.3'
 gem 'jekyll-seo-tag', '~> 2.8'
 gem 'github-pages', group: :jekyll_plugins
 
